@@ -1,0 +1,26 @@
+# Ejercicio 1 y 5: Nombres
+nombres = ["Ana", "Carlos", "Diana", "Eduardo", "Gloria"]
+print("--- Ejercicio 1 ---")
+[print(f"Compañero: {n}") for n in nombres]
+
+print("\n--- Ejercicio 5 ---")
+nombres.pop(2)  # Elimina el tercer elemento (índice 2)
+print(f"Resultado: {nombres}")
+
+# Ejercicio 2: Notas
+print("\n--- Ejercicio 2 ---")
+notas = [float(input(f"Nota {i+1}: ")) for i in range(7)]
+print(f"a) Mayor: {max(notas)}\nb) Menor: {min(notas)}\nc) Promedio: {sum(notas)/7:.2f}")
+
+# Ejercicio 3: Modificar quinto elemento
+print("\n--- Ejercicio 3 ---")
+numeros = list(range(1, 11))
+print(f"Original: {numeros}")
+numeros[4] = 99  # El quinto elemento es el índice 4
+print(f"Actualizado: {numeros}")
+
+# Ejercicio 4: Filtrar edades
+print("\n--- Ejercicio 4 ---")
+edades = [int(input(f"Edad {i+1}: ")) for i in range(5)]
+print("Mayores o iguales a 18:")
+[print(e) for e in edades if e >= 18]
