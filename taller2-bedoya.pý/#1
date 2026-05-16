@@ -1,0 +1,41 @@
+#4
+# 1. Cargar el vector de 15 enteros
+vector = []
+print("--- Ingreso de Datos (15 números enteros) ---")
+for i in range(15):
+    num = int(input(f"Ingrese el valor para la posición {i}: "))
+    vector.append(num)
+
+# 2. Analizar y mostrar estadísticas del vector original
+print("\n================ RESULTADOS ORIGINALES ================")
+print(f"Vector original: {vector}")
+
+# Encontrar mayor, menor y promedio
+mayor = max(vector)
+pos_mayor = vector.index(mayor)
+
+menor = min(vector)
+pos_menor = vector.index(menor)
+
+promedio = sum(vector) / len(vector)
+
+print(f"Mayor valor: {mayor} (Posición: {pos_mayor})")
+print(f"Menor valor: {menor} (Posición: {pos_menor})")
+print(f"Promedio de los valores: {promedio:.2f}")
+print("======================================================")
+
+# 3. Modificar una posición específica
+print("\n--- Modificación del Vector ---")
+posicion = int(input("Ingrese la posición que desea modificar (0 a 14): "))
+
+# Validar que la posición exista en el vector
+if 0 <= posicion < 15:
+    nuevo_valor = int(input(f"Ingrese el nuevo valor para la posición {posicion}: "))
+    vector[posicion] = nuevo_valor
+    
+    # Mostrar el vector actualizado
+    print("\n================ VECTOR ACTUALIZADO ================")
+    print(f"Vector modificado: {vector}")
+    print("====================================================")
+else:
+    print("Error: La posición ingresada no es válida (debe ser entre 0 y 14).")
