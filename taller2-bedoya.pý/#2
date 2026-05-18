@@ -1,1 +1,17 @@
 #5
+n_est = int(input("¿cuantos estudiantes?"))
+n_notas = int(input("¿cuantas notas por estudiante?"))
+matriz = []
+
+for i in range(n_est):
+    fila = []
+    print(f"ingres las {n_notas} notas del estudiante {i+1}:")
+    for j in range(n_notas):
+        while True:
+            try:
+                nota = float(input(f" Nota {j+1}:"))
+                fila. append(nota)
+                break
+            except ValueError:
+                print("ingresar un numero valido.")
+matriz.append(fila)
